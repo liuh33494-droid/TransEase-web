@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>透镜 TransEase - 专为 macOS 打造的原生随动透镜与实时字幕神器</title>
+  <meta name="description" content="透镜（TransEase）是一款专为 macOS 深度优化的原生随动透镜与实时同传字幕工具。吸附鼠标随动滑行、指哪翻哪；4行长效阶梯保留视频字幕；1:1 原位透明覆盖；内置国内直连通道。">
+  <meta name="keywords" content="透镜, TransEase, macOS翻译, 随动透镜, 实时字幕, 视频同传, 划词翻译, 屏幕OCR">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="透镜 TransEase - 视线所及，原位译达">
+  <meta property="og:description" content="专为 macOS 打造的原生随动透镜与实时音视频字幕工具，告别繁琐的复制粘贴。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/app-icon.png">
+
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Grid Background -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="assets/app-icon.png" alt="TransEase Logo" class="brand-icon">
+        <div class="brand-info">
+          <div class="brand-title">
+            <span>透镜 TransEase</span>
+            <span class="brand-badge">macOS 现行版</span>
+          </div>
+          <span class="brand-sub">灵犀随动 · 原生沉浸式翻译</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-links" id="siteNav">
+        <li><a href="#features" class="nav-link">核心特性</a></li>
+        <li><a href="#video-subtitles" class="nav-link">视频字幕与同传</a></li>
+        <li><a href="#shortcuts" class="nav-link">快捷指令</a></li>
+        <li><a href="#ecosystem" class="nav-link">多端生态</a></li>
+        <li><a href="#privacy" class="nav-link">隐私安全</a></li>
+        <li><a href="#faq" class="nav-link">常见问题</a></li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          下载 macOS 版
+        </a>
+      </div>
+
+      <!-- Mobile Nav Toggle -->
+      <button class="nav-toggle" id="mobileNavToggle" aria-label="切换菜单" aria-expanded="false">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-pill">
+          <span class="hero-pill-dot"></span>
+          <span>TransEase 3.0 现已就绪 · 深度适配 macOS Sonoma / Sequoia</span>
+        </div>
+
+        <h1 class="hero-title">
+          视线所及，<span class="hero-title-highlight">原位译达</span>。
+        </h1>
+
+        <p class="hero-desc">
+          打破复制与粘贴的繁琐阻碍。吸附光标的随动透镜、长效阶梯保留的视频实时同传字幕、1:1 原位透明覆盖与国内网络免翻直连，自然融入你的每一次阅读、观影与会议。
+        </p>
+
+        <div class="hero-cta">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            免费获取 macOS 原生版
+          </a>
+          <a href="#ecosystem" class="btn btn-secondary btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+              <line x1="12" y1="18" x2="12.01" y2="18"></line>
+            </svg>
+            预约手机端 / 多端内测
+          </a>
+        </div>
+
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>Apple Silicon (M1/M2/M3/M4) 原生架构</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>纯本地内存处理 · 零上传隐私保障</span>
+          </div>
+          <div class="hero-meta-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>内置国内网络直连 & 自定义代理</span>
+          </div>
+        </div>
+
+        <!-- Interactive Lens Playground -->
+        <div class="demo-stage-wrapper">
+          <div class="demo-stage" id="demoStage">
+            <div class="window-header">
+              <div class="traffic-lights">
+                <span class="traffic-dot dot-red"></span>
+                <span class="traffic-dot dot-yellow"></span>
+                <span class="traffic-dot dot-green"></span>
+              </div>
+              <div class="window-title">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 6 12 12 16 14"></polygon></svg>
+                <span>透镜交互式沙盒体验（试着在下方移动鼠标）</span>
+                <span class="window-badge">Hover Lens Demo</span>
+              </div>
+              <div style="width: 50px;"></div>
+            </div>
+
+            <div class="window-body">
+              <div class="sim-article">
+                <span class="sim-tag">Technology Whitepaper · System Architecture</span>
+                <h2 class="sim-heading" id="simHeading">DeepSeek-V3 Architecture: Multi-Head Latent Attention and Mixture-of-Experts</h2>
+                <p class="sim-paragraph" id="simParagraph1">
+                  TransEase seamlessly captures and decodes visual framebuffers directly from macOS Display Services without introducing rendering latency.
+                </p>
+                <div class="sim-code-block" id="simCodeBlock">
+                  <span style="color: #f472b6;">func</span> <span style="color: #60a5fa;">renderHoverLens</span>(at point: <span style="color: #34d399;">CGPoint</span>) -> <span style="color: #34d399;">NSPanel</span> { ... }
+                </div>
+                <p class="sim-paragraph" id="simParagraph2">
+                  No copy-pasting required. Simply hover your cursor for 0.18s, and the meaning naturally emerges in place.
+                </p>
+              </div>
+
+              <!-- Floating Simulated Lens -->
+              <div class="sim-lens" id="simLens">
+                <div class="sim-lens-header">
+                  <span class="sim-lens-title">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    透镜 (Hover Lens) · ⌥X
+                  </span>
+                  <span style="font-size: 0.72rem; color: #94a3b8;">440×210 pt 黄金画幅 · 📌 固定</span>
+                </div>
+                <div class="sim-lens-body">
+                  <div class="sim-lens-original" id="lensOriginal">
+                    DeepSeek-V3 Architecture: Multi-Head Latent Attention and Mixture-of-Experts
+                  </div>
+                  <div class="sim-lens-translated" id="lensTranslated">
+                    DeepSeek-V3 架构演进：多头潜在注意力机制与大规模专家混合架构深度解析
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="demo-instruction">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+            <span>提示：将鼠标在上方窗口中自由晃动，感受随动透镜平滑吸附光标与实时原位译文呈现</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Features Grid -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Core Capabilities</span>
+          <h2 class="section-title">四大核心引擎，重塑全场景翻译工作流</h2>
+          <p class="section-desc">
+            从浏览英文文献、审查外文代码，到畅享外语视频无障碍生肉与线上跨国会议，透镜提供恰到好处的优雅解法。
+          </p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🔮</div>
+            <h3 class="feature-title">鼠标随动透镜 (Hover Lens)</h3>
+            <p class="feature-text">
+              专门调校的 440×210 pt 黄金画幅，吸附光标右下方平滑滑行。停顿约 0.18 秒即可自动捕获识别，移到哪翻到哪。
+            </p>
+            <ul class="feature-points">
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>原生事件穿透</strong>：不抢焦点、不阻挡鼠标点击网页链接或滚动滚轮。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>双模切换</strong>：支持「1:1 原位 AR 覆盖」与「大字号排版卡片」随心切换。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>临时图钉锁定</strong>：点击 📌 即可固定位置，方便框选或长文复制。</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-card" id="video-subtitles">
+            <div class="feature-icon-box">🎙️</div>
+            <h3 class="feature-title">实时视频字幕与倾听同传</h3>
+            <p class="feature-text">
+              看 YouTube 外语视频、国外公开课或参加 Zoom 跨国会议的利器。独创 4 行长效阶梯保留歌词流，破解单句即逝困局。
+            </p>
+            <ul class="feature-points">
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>阶梯保留 15~25 秒</strong>：前 3 句完整历史 + 当前焦点句，一眼理顺完整上下文。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>一键导出双语 SRT</strong>：全文抽屉支持一键导出外挂字幕或纯中文连贯段落。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>低功耗低发热</strong>：音频采集 60ms 节流与阈值过滤，长时间观影 CPU 占用极低。</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">🪟</div>
+            <h3 class="feature-title">顶层窗口原位透明覆盖</h3>
+            <p class="feature-text">
+              借助 macOS 窗口层级（Z-Order）算法，精准锁定当前最顶层的活动窗口，在其上铺设 1:1 透明毛玻璃画板。
+            </p>
+            <ul class="feature-points">
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>真正原位贴合</strong>：排版、插图、代码块位置完全保留，中文直接贴在英文之上。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>自由拖拽缩放</strong>：自带顶部拖动手柄，支持四周及四角自由拉伸画幅。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>一键透视原文</strong>：随时切换中文覆盖层透明度，对照阅读更安心。</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-card">
+            <div class="feature-icon-box">⚡</div>
+            <h3 class="feature-title">国内免翻直连 & 多通道自适应</h3>
+            <p class="feature-text">
+              彻底攻克国内网络连接受阻问题。接入国内官方直连通道与本地代理自适应配置，无论是否开启代理均能极速直出。
+            </p>
+            <ul class="feature-points">
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>百度翻译官方直连</strong>：支持个人开发者免费 App ID 密钥，国内直连免翻墙秒级返回。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>网络代理端口自适应</strong>：自动捕获系统代理或手动配置 127.0.0.1 本地代理端口。</span>
+              </li>
+              <li class="feature-point">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>多通道冗余兜底</strong>：智能联动 Google 极速、MyMemory 与 Gemini AI 解析。</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shortcut Command Bar -->
+    <section class="section shortcuts-section" id="shortcuts">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Keyboard Commander</span>
+          <h2 class="section-title">原生键盘指令，手不离键盘的高效掌控</h2>
+          <p class="section-desc">
+            精心调校的 macOS 全局快捷键，随手一按即可在毫秒间唤醒或退出对应功能。
+          </p>
+        </div>
+
+        <div class="shortcut-grid">
+          <div class="shortcut-card">
+            <div class="kbd-badge">⌥ Option + X</div>
+            <div class="shortcut-name">开启 / 隐藏鼠标随动透镜</div>
+            <div class="shortcut-desc">吸附光标滑行，指哪翻哪；再次按下或按 Esc 瞬间隐藏。</div>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="kbd-badge">⌥ Option + V</div>
+            <div class="shortcut-name">开启实时视频字幕</div>
+            <div class="shortcut-desc">针对屏幕视频窗口进行实时原位或居中浮层双语字幕呈现。</div>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="kbd-badge">⌥ Option + L</div>
+            <div class="shortcut-name">开启倾听同传字幕</div>
+            <div class="shortcut-desc">针对麦克风外放或耳机系统内录进行持续听写与 4 行歌词流同传。</div>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="kbd-badge">⌥ Option + S</div>
+            <div class="shortcut-name">顶层窗口原位透明覆盖</div>
+            <div class="shortcut-desc">锁定最顶层窗口，1:1 坐标原位铺设毛玻璃中文译文画板。</div>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="kbd-badge">⌥ Option + D</div>
+            <div class="shortcut-name">全局划词即时翻译</div>
+            <div class="shortcut-desc">划选英文单词或段落后按下，光标处浮现词性音标卡片。</div>
+          </div>
+
+          <div class="shortcut-card">
+            <div class="kbd-badge">⌥ Option + Space</div>
+            <div class="shortcut-name">呼出多功能主面板</div>
+            <div class="shortcut-desc">随叫随到的独立主窗，支持手动键盘打字即输即翻与历史查阅。</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Multi-Platform Ecosystem Matrix -->
+    <section class="section" id="ecosystem">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Ecosystem Roadmap</span>
+          <h2 class="section-title">全场景互联：从桌面扩展到随身多端</h2>
+          <p class="section-desc">
+            透镜不仅仅是一款 macOS 桌面工具。未来我们将把这份原位、直觉、高效的翻译体验延伸至手机端与全平台。
+          </p>
+        </div>
+
+        <div class="matrix-grid">
+          <!-- macOS -->
+          <div class="matrix-card active">
+            <span class="matrix-status-pill pill-ready">● 现已发布</span>
+            <div class="matrix-platform-icon"></div>
+            <h3 class="matrix-platform-title">macOS 电脑端</h3>
+            <div class="matrix-platform-target">macOS 14.0+ (Sonoma / Sequoia)</div>
+            <p class="matrix-platform-desc">
+              采用 Swift / AppKit 原生架构，适配 Apple Silicon。随动透镜、视频实时同传、顶层原位覆盖与状态栏深度整合。
+            </p>
+            <a href="#download" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.85rem;">下载稳定版</a>
+          </div>
+
+          <!-- iOS -->
+          <div class="matrix-card">
+            <span class="matrix-status-pill pill-wip">◐ 研发推进中</span>
+            <div class="matrix-platform-icon">📱</div>
+            <h3 class="matrix-platform-title">iOS / iPadOS</h3>
+            <div class="matrix-platform-target">iPhone / iPad / Safari</div>
+            <p class="matrix-platform-desc">
+              适配移动场景：相机实时 AR 拍照翻译、面对面双向即时同传、Safari 网页翻译扩展与系统全局分享即时识别。
+            </p>
+            <a href="#reserve" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.85rem;">预约 TestFlight</a>
+          </div>
+
+          <!-- Android -->
+          <div class="matrix-card">
+            <span class="matrix-status-pill pill-plan">○ 架构规划中</span>
+            <div class="matrix-platform-icon">🤖</div>
+            <h3 class="matrix-platform-title">Android 移动端</h3>
+            <div class="matrix-platform-target">Android 12+ / 手机与折叠屏</div>
+            <p class="matrix-platform-desc">
+              依托 Android 系统级全局悬浮窗（Floating Window）与屏幕投影能力，将随动透镜与悬浮视频字幕完整搬上安卓机。
+            </p>
+            <a href="#reserve" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.85rem;">登记内测意向</a>
+          </div>
+
+          <!-- Windows -->
+          <div class="matrix-card">
+            <span class="matrix-status-pill pill-plan">○ 架构规划中</span>
+            <div class="matrix-platform-icon">⊞</div>
+            <h3 class="matrix-platform-title">Windows 电脑端</h3>
+            <div class="matrix-platform-target">Windows 11 / x64 & ARM64</div>
+            <p class="matrix-platform-desc">
+              采用跨平台高性能渲染内核，复用核心分词与多通道自适应引擎，为 Windows 创作者和办公用户带来同等流畅体验。
+            </p>
+            <a href="#reserve" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.85rem;">预约更新通知</a>
+          </div>
+        </div>
+
+        <!-- Reservation Form -->
+        <div class="reserve-box" id="reserve">
+          <div class="reserve-info">
+            <h3 class="reserve-title">想第一时间在手机与电脑多端体验透镜？</h3>
+            <p class="reserve-desc">
+              留下你的邮箱，我们会在 iOS TestFlight 公测或 Android / Windows 测试包发布的第一时间向你推送邀请。
+            </p>
+          </div>
+          <form class="reserve-form" id="reserveForm">
+            <input type="email" class="input-email" placeholder="输入您的常用邮箱 (例如: name@example.com)" required>
+            <button type="submit" class="btn btn-primary">即刻预约</button>
+          </form>
+          <div id="reserveStatus" style="width: 100%; font-size: 0.85rem; margin-top: 4px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy & Security -->
+    <section class="section" id="privacy">
+      <div class="container">
+        <div class="trust-banner">
+          <span class="section-pill">Privacy By Design</span>
+          <h2 class="section-title">本地优先，坚守你的每一寸数据主权</h2>
+          <p class="section-desc" style="max-width: 680px; margin: 0 auto;">
+            透镜从立项之初就将用户隐私放在首位。我们坚决拒绝滥用屏幕与麦克风权限。
+          </p>
+
+          <div class="trust-badge-group">
+            <div class="trust-badge">
+              <div class="trust-badge-icon">🔒</div>
+              <h4 class="trust-badge-title">纯本地内存瞬态处理</h4>
+              <p class="trust-badge-desc">
+                透镜截取的屏幕帧与麦克风音频仅在 macOS 系统的安全内存区完成 OCR 与分词，翻译完成后立即释放，绝不在磁盘落地存储。
+              </p>
+            </div>
+
+            <div class="trust-badge">
+              <div class="trust-badge-icon">🛡️</div>
+              <h4 class="trust-badge-title">零中间商数据中转</h4>
+              <p class="trust-badge-desc">
+                网络请求直接发往用户选择或配置的官方翻译服务（如百度翻译官方接口或 Google），开发者没有任何中继服务器收集你的内容。
+              </p>
+            </div>
+
+            <div class="trust-badge">
+              <div class="trust-badge-icon">📋</div>
+              <h4 class="trust-badge-title">合规透明的权限授权</h4>
+              <p class="trust-badge-desc">
+                严格遵循 Apple 官方安全沙盒规范，屏幕录制与辅助功能权限均需用户在系统设置中自主授权，随时可以撤回。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Accordion -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-pill">Help & FAQ</span>
+          <h2 class="section-title">常见问题解答</h2>
+          <p class="section-desc">关于安装、系统权限、网络配置以及多端上架计划的解答。</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>初次打开应用提示“无法打开，因为无法验证开发者”怎么办？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                这是 macOS Gatekeeper 对未走 App Store 商店分发应用的常规安全保护。解决方法非常简单：在「访达 (Finder) -> 应用程序」中找到 TransEase，<strong>按住 Control 键并用鼠标右键点击图标，在弹出菜单中选择“打开”</strong>，点击确认即可永久加入系统受信任名单；或者在终端中运行 <code>xattr -cr /Applications/TransEase.app</code> 即可解除拦截。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>为什么首次运行需要授予“屏幕录制”和“辅助功能”权限？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                透镜需要「屏幕录制 (ScreenCaptureKit)」权限以便从屏幕上读取你需要翻译的英文文本并执行高精度本地 OCR；需要「辅助功能 (Accessibility)」权限以便响应全局快捷键并让透镜吸附鼠标滑动。这些权限完全局限在你的电脑本地，没有任何数据会被上传到任何外部个人服务器。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>在国内直接使用透镜会卡顿或超时吗？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                透镜已专项优化国内网络支持！在应用偏好设置中，您可以直接切换到「百度翻译官方直连」，输入您自己在百度翻译开放平台免费申请的 App ID 与密钥即可免翻墙极速直连；如果您平时开启了科学上网代理，透镜也支持自动捕获系统代理或手动配置本地代理端口（如 127.0.0.1:7890），秒级畅享 Google 极速翻译与 Gemini AI 解析。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>为什么后续优先走官网分发，后续上架应用商城的进度如何？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                透镜的随动透镜、实时视频字幕和原位透明覆盖深度依赖 macOS 底层系统权限。Mac App Store 的严格沙盒（Sandbox）会限制此类系统级交互工具（这也是知名工具如 Bob、Raycast、CleanMyMac 均以官网独立分发为主的原因）。目前我们通过官网提供完整的无阉割版本；同时正在规划符合 iOS App Store 与各大应用商城合规规范的移动版本。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="section" id="download">
+      <div class="container">
+        <div class="download-card">
+          <h2 class="download-title">视线所至，即刻开启流利阅读</h2>
+          <p class="download-desc">
+            告别打断思路的复制粘贴。立即下载适用于 macOS 的 TransEase 透镜，体验与原生系统浑然一体的现代翻译工具。
+          </p>
+          <div class="hero-cta" style="margin-bottom: 24px;">
+            <a href="https://github.com/your-username/TransEase/releases" class="btn btn-primary btn-lg" id="btnDownload">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              立即下载 TransEase for macOS (.dmg)
+            </a>
+          </div>
+          <div style="font-size: 0.85rem; color: #94a3b8;">
+            支持 macOS 14.0 (Sonoma) / macOS 15.0 (Sequoia) 及以上 · 通用二进制 (Apple Silicon & Intel)
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="brand">
+            <img src="assets/app-icon.png" alt="TransEase Logo" style="width: 30px; height: 30px; border-radius: 8px;">
+            <span class="brand-title" style="font-size: 1.05rem;">透镜 TransEase</span>
+          </div>
+          <p class="footer-brand-desc">
+            专为 macOS 与现代创作者打造的原生随动透镜与多语种实时字幕工具，让外语阅读与视听无感随行。
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">产品与下载</h4>
+          <ul class="footer-links">
+            <li><a href="#features" class="footer-link">核心特性</a></li>
+            <li><a href="#video-subtitles" class="footer-link">视频字幕同传</a></li>
+            <li><a href="#shortcuts" class="footer-link">快捷键速查</a></li>
+            <li><a href="#download" class="footer-link">macOS 稳定版</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">多端与生态</h4>
+          <ul class="footer-links">
+            <li><a href="#ecosystem" class="footer-link">iOS 移动版预约</a></li>
+            <li><a href="#ecosystem" class="footer-link">Android 悬浮窗版</a></li>
+            <li><a href="#ecosystem" class="footer-link">Windows 跨端规划</a></li>
+            <li><a href="#faq" class="footer-link">常见问题</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">合规与支持</h4>
+          <ul class="footer-links">
+            <li><a href="privacy.html" class="footer-link">隐私政策 (Privacy)</a></li>
+            <li><a href="terms.html" class="footer-link">服务条款 (Terms)</a></li>
+            <li><a href="mailto:support@transease.app" class="footer-link">联系与技术支持</a></li>
+            <li><a href="https://github.com" class="footer-link" target="_blank" rel="noopener">GitHub 仓库</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 TransEase (透镜) 团队. 保留所有权利。
+        </div>
+        <div>
+          Designed for Apple Ecosystem · Crafted with Swift & Modern Web
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

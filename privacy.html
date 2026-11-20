@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>隐私政策 (Privacy Policy) - 透镜 TransEase</title>
+  <meta name="description" content="透镜（TransEase）隐私政策。详细说明应用在屏幕捕获、音频识别与翻译服务交互中的数据处理与安全保障原则。">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/app-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Grid Background -->
+  <div class="bg-grid-overlay" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="brand">
+        <img src="assets/app-icon.png" alt="TransEase Logo" class="brand-icon">
+        <div class="brand-info">
+          <div class="brand-title">
+            <span>透镜 TransEase</span>
+          </div>
+          <span class="brand-sub">隐私与合规规范</span>
+        </div>
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="btn btn-secondary">返回官网首页</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="legal-page">
+      <header class="legal-header">
+        <h1 class="legal-title">隐私政策 (Privacy Policy)</h1>
+        <div class="legal-meta">
+          <span>最近更新日期：2026 年 11 月 20 日</span> · <span>适用平台：macOS / iOS / Android / Windows 全端通用</span>
+        </div>
+      </header>
+
+      <article class="legal-content">
+        <p>
+          欢迎使用 <strong>透镜 (TransEase)</strong>（以下统称“本软件”或“我们”）。我们高度重视用户的个人隐私与数据安全。本隐私政策旨在向您说明透镜在运行过程中如何处理、保护您的数据，以及我们在系统级权限调用上的严格安全边界。
+        </p>
+
+        <h2>一、核心原则：本地优先与数据最小化</h2>
+        <p>
+          透镜的产品设计原则是“<strong>本地优先（Local-First）</strong>”与“<strong>数据主权归属用户</strong>”。我们不会为了商业变现或数据分析而收集您的屏幕内容、语音对话或日常操作记录。
+        </p>
+
+        <h2>二、系统权限的使用与必要性说明</h2>
+        <p>为了在 macOS 或后续移动端上实现实时原位翻译与视频字幕功能，本软件需要向操作系统申请特定权限。我们对这些权限的使用范围做出如下严格承诺：</p>
+        <ul>
+          <li>
+            <strong>屏幕录制权限（ScreenCaptureKit / Screen Recording）</strong>：
+            仅用于捕获您主动触发翻译的屏幕区域（随动透镜范围或顶层窗口）。所有捕获到的图像帧仅在系统易失性物理内存中进行 OCR 光学字符识别，提取文字完成后图像帧立即在内存中销毁，<strong>绝不向任何外部服务器上传截屏或录屏，绝不在本地磁盘落地留存</strong>。
+          </li>
+          <li>
+            <strong>辅助功能权限（Accessibility API）</strong>：
+            仅用于全局快捷键（如 <code>⌥ Option + X</code>）的响应、鼠标悬停位置探测以及在鼠标划选文本时获取待翻译的文本内容。本软件绝不记录您的键盘击键历史（Keylogging），绝不窃取用户密码或账户输入信息。
+          </li>
+          <li>
+            <strong>麦克风与音频内录权限（Microphone & System Audio）</strong>：
+            仅在您主动开启“实时视频字幕（⌥V）”或“倾听同传（⌥L）”功能时调用。系统音频流仅用于本地语音特征提取与分词，音频数据随用随弃，绝不存储音频原声。
+          </li>
+        </ul>
+
+        <h2>三、翻译请求与第三方网络交互</h2>
+        <p>当本软件识别到待翻译的文本后，会将纯文本字符串发送至翻译引擎。关于网络请求的具体说明：</p>
+        <ul>
+          <li>
+            <strong>用户自主配置直连</strong>：若您在设置中启用了“百度翻译官方直连”，软件直接使用您自备的官方 App ID 与密钥调用百度官方开放接口，通信全程通过 HTTPS 加密，直接往返于您的电脑与官方服务器之间。
+          </li>
+          <li>
+            <strong>零中继服务器</strong>：开发者团队没有架设任何用于中转或嗅探用户翻译文本的中间服务器。您的翻译内容不会经过任何第三方中间人。
+          </li>
+          <li>
+            <strong>网络代理支持</strong>：如果您配置了本地代理端口（如 127.0.0.1:7890），底层网络请求将严格遵循您的系统或本地代理规则转发，保障网络连通性。
+          </li>
+        </ul>
+
+        <h2>四、数据存储与持久化政策</h2>
+        <ul>
+          <li>
+            <strong>用户配置数据</strong>：您的快捷键习惯、首选语言、代理设置以及百度 API Key 等敏感设置项，均加密存储于您本机的 macOS UserDefaults 或受保护的本地偏好文件中，绝不上传云端。
+          </li>
+          <li>
+            <strong>翻译历史记录</strong>：视频字幕的全文抽屉或翻译历史仅在当前会话的本地内存中维护（上限 120 句），您可以随时点击“清空历史”或关闭软件，所有瞬态记录随即清空。
+          </li>
+        </ul>
+
+        <h2>五、用户权利与撤销授权</h2>
+        <p>
+          您可以随时在操作系统的「系统设置 -> 隐私与安全性」中，随时关闭对 TransEase 的“屏幕录制”、“辅助功能”或“麦克风”授权。关闭相应授权后，依赖该权限的功能将优雅停用，不影响软件其他模块的正常运行。
+        </p>
+
+        <h2>六、未成年人保护</h2>
+        <p>
+          本软件为通用型生产力与学习辅助工具，不针对未成年人定向推广，也不会故意收集未成年人的任何个人身份信息。
+        </p>
+
+        <h2>七、隐私政策的更新与联系方式</h2>
+        <p>
+          随着透镜后续版本迭代以及 iOS / Android 移动端与 Windows 版的上线，我们可能会适时修订本隐私政策。任何实质性变更都会在官网主页公示。
+        </p>
+        <p>
+          若您对本隐私政策有任何疑问、意见或合规建议，请通过以下方式联系开发者：
+        </p>
+        <ul>
+          <li><strong>官方电子邮箱</strong>：<a href="mailto:support@transease.app" style="color: var(--accent-cyan);">support@transease.app</a></li>
+          <li><strong>开源主页 / Issue 反馈</strong>：<a href="https://github.com" target="_blank" rel="noopener" style="color: var(--accent-cyan);">GitHub Issue 反馈通道</a></li>
+        </ul>
+      </article>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container" style="text-align: center;">
+      <div style="font-size: 0.85rem; color: var(--text-muted);">
+        © 2026 TransEase (透镜) 团队. 保留所有权利 · 本地优先，坚守隐私。
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

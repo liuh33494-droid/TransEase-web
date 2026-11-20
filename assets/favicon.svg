@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="lensBg" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <linearGradient id="glassGlow" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1" />
+    </linearGradient>
+    <filter id="shadow" x="0" y="4" width="64" height="60" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="url(#lensBg)" filter="url(#shadow)"/>
+  <circle cx="28" cy="28" r="13" stroke="url(#glassGlow)" stroke-width="3" stroke-linecap="round"/>
+  <path d="M38 38L47 47" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <path d="M23 28H33M28 23V33" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-opacity="0.85"/>
+  <circle cx="28" cy="28" r="4" fill="#ffffff" fill-opacity="0.9"/>
+</svg>
