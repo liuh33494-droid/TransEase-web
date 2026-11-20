@@ -1,0 +1,8 @@
+{
+  "version": "3.1.0",
+  "build": 310,
+  "releaseDate": "2026-11-20",
+  "name": "TransEase 极速随动透镜与多语种同传字幕",
+  "releaseNotes": "1. 百度翻译开放平台官方直连通道及一键连通性测速诊断\n2. 开机自动启动 (Launch at Login) 原生系统支持\n3. 商业级 DMG 镜像安装包（自带 Applications 拖拽替身）\n4. 应用内版本检查与线上更新一键直达",
+  "downloadUrl": "https://liuh33494-droid.github.io/TransEase-web/downloads/TransEase_macOS.dmg"
+}
