@@ -1,0 +1,4 @@
+# Updater manifest. Match the Workers default so app 3.1.0 always revalidates.
+# Do not lengthen max-age; a stale version.json hides new installers.
+/version.json
+  Cache-Control: public, max-age=0, must-revalidate

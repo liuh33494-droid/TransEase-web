@@ -1,0 +1,12 @@
+{
+  // Assets-only Worker. Do not add main, assets.binding, or run_worker_first.
+  // With no Worker script, a missing path returns 404 (no SPA fallback).
+  // html_handling none serves .html, version.json, and installers at their
+  // exact paths, with no extension-stripping redirect.
+  "name": "transease-web",
+  "compatibility_date": "2026-11-25",
+  "assets": {
+    "directory": ".",
+    "html_handling": "none"
+  }
+}
