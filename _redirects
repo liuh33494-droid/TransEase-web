@@ -1,0 +1,3 @@
+# Exact-path rewrite only. Status 200 keeps the browser URL at /.
+# Not a 3xx redirect. Does not apply to version.json or downloads.
+/ /index.html 200
