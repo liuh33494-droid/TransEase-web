@@ -78,7 +78,7 @@
       <div class="container">
         <div class="hero-pill">
           <span class="hero-pill-dot"></span>
-          <span>TransEase 3.0 现已就绪 · 深度适配 macOS Sonoma / Sequoia</span>
+          <span>TransEase v3.1.0 现已发布 · 深度适配 macOS Sonoma / Sequoia</span>
         </div>
 
         <h1 class="hero-title">
@@ -161,7 +161,7 @@
                     <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                     透镜 (Hover Lens) · ⌥X
                   </span>
-                  <span style="font-size: 0.72rem; color: #94a3b8;">440×210 pt 黄金画幅 · 📌 固定</span>
+                  <span style="font-size: 0.72rem; color: #94a3b8;">光学取景框 · Space 锁定 · ⌥ 滚轮缩放</span>
                 </div>
                 <div class="sim-lens-body">
                   <div class="sim-lens-original" id="lensOriginal">
@@ -200,20 +200,20 @@
             <div class="feature-icon-box">🔮</div>
             <h3 class="feature-title">鼠标随动透镜 (Hover Lens)</h3>
             <p class="feature-text">
-              专门调校的 440×210 pt 黄金画幅，吸附光标右下方平滑滑行。停顿约 0.18 秒即可自动捕获识别，移到哪翻到哪。
+              提供中 / 大 / 宽幅三档光学画幅（支持按住 ⌥ + 滚轮无级微调），吸附光标平滑滑行，移到哪翻到哪。
             </p>
             <ul class="feature-points">
               <li class="feature-point">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>原生事件穿透</strong>：不抢焦点、不阻挡鼠标点击网页链接或滚动滚轮。</span>
+                <span><strong>原生事件穿透</strong>：独立悬浮 Dock 控制栏，不抢焦点、不阻挡底层网页点击或滚动。</span>
               </li>
               <li class="feature-point">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>双模切换</strong>：支持「1:1 原位 AR 覆盖」与「大字号排版卡片」随心切换。</span>
+                <span><strong>1:1 原位覆盖 + 透视原文</strong>：中/英/日/韩等语种一键切换，按住 Control 或 Tab 瞬时透视原文。</span>
               </li>
               <li class="feature-point">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span><strong>临时图钉锁定</strong>：点击 📌 即可固定位置，方便框选或长文复制。</span>
+                <span><strong>Space 锁定 & 生词本闭环</strong>：按 Space 锁定即可查英英词典、朗读发音并收藏导出至 Anki / Markdown。</span>
               </li>
             </ul>
           </div>
@@ -390,29 +390,29 @@
           </div>
 
           <!-- Windows -->
-          <div class="matrix-card">
-            <span class="matrix-status-pill pill-wip">◐ 架构就绪 · CI 构建中</span>
+          <div class="matrix-card active">
+            <span class="matrix-status-pill pill-ready">● 现已发布</span>
             <div class="matrix-platform-icon">⊞</div>
             <h3 class="matrix-platform-title">Windows 电脑端</h3>
             <div class="matrix-platform-target">Windows 11 / 10 · x64 架构</div>
             <p class="matrix-platform-desc">
-              基于 Tauri 2.0 (Rust) + Win32 原生穿透与 WASAPI 扬声器回环技术，低内存低发热，专为 Windows 视频与多任务创作打造。
+              基于 Tauri 2.0 (Rust) 原生架构，内置百度官方直连 MD5 后端、全局快捷键穿透解锁与 4 行阶梯同传字幕流。
             </p>
-            <a href="#reserve" class="btn btn-secondary" style="padding: 8px 14px; font-size: 0.85rem;">预约 Windows 测试包</a>
+            <a href="javascript:void(0)" onclick="openWindowsDownloadModal()" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.85rem;">下载 Windows 版</a>
           </div>
         </div>
 
         <!-- Reservation Form -->
         <div class="reserve-box" id="reserve">
           <div class="reserve-info">
-            <h3 class="reserve-title">想第一时间在手机与电脑多端体验透镜？</h3>
+            <h3 class="reserve-title">想第一时间在手机端体验 iOS / Android 透镜？</h3>
             <p class="reserve-desc">
-              留下你的邮箱，我们会在 iOS TestFlight 公测或 Android / Windows 测试包发布的第一时间向你推送邀请。
+              输入邮箱即可生成内测预约登记，也可直接点击邮件链接向团队发送移动端 TestFlight 内测申请。
             </p>
           </div>
           <form class="reserve-form" id="reserveForm">
             <input type="email" class="input-email" placeholder="输入您的常用邮箱 (例如: name@example.com)" required>
-            <button type="submit" class="btn btn-primary">即刻预约</button>
+            <button type="submit" class="btn btn-primary">登记内测申请</button>
           </form>
           <div id="reserveStatus" style="width: 100%; font-size: 0.85rem; margin-top: 4px;"></div>
         </div>
@@ -656,7 +656,7 @@
       </div>
       
       <div style="font-size: 0.8rem; color: #64748b; line-height: 1.5; border-top: 1px solid rgba(255, 255, 255, 0.08); padding-top: 14px;">
-        💡 提示：如果下载速度较慢，请优先使用「国内免翻高速下载」。若打开提示未知发布者，点击“更多信息 -> 仍要运行”即可。
+        💡 提示：国内网络建议优先使用上方的「官网直链极速下载（免翻）」。若打开提示未知发布者，点击“更多信息 -> 仍要运行”即可。
       </div>
     </div>
   </div>

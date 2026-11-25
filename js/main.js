@@ -189,7 +189,9 @@ function initReservationForm() {
     } catch (_) {}
 
     input.value = '';
-    statusEl.textContent = '✓ 预约成功！当 iOS / Android / Windows 测试版发布时，我们将通过邮件第一时间邀请您体验。';
-    statusEl.style.color = '#38bdf8';
+    const subject = encodeURIComponent('申请透镜 TransEase 移动端内测体验');
+    const body = encodeURIComponent(`申请邮箱：${email}\n期望体验平台：iOS TestFlight / Android\n`);
+    statusEl.innerHTML = `已在本机记录登记邮箱（纯静态官网不会自动上传数据）。请 <a href="mailto:support@transease.app?subject=${subject}&body=${body}" style="color:#38bdf8;text-decoration:underline;">点击此处发送申请邮件</a> 或前往 <a href="https://github.com/liuh33494-droid/TransEase-web/issues" target="_blank" rel="noopener" style="color:#38bdf8;text-decoration:underline;">GitHub Issue</a> 留言获取内测资格。`;
+    statusEl.style.color = '#94a3b8';
   });
 }
