@@ -110,7 +110,7 @@
         <div class="hero-meta">
           <div class="hero-meta-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            <span>Apple Silicon (M1/M2/M3/M4) 原生架构</span>
+            <span>Universal 通用架构 (Apple Silicon & Intel 原生支持)</span>
           </div>
           <div class="hero-meta-item">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -360,7 +360,7 @@
             <h3 class="matrix-platform-title">macOS 电脑端</h3>
             <div class="matrix-platform-target">macOS 14.0+ (Sonoma / Sequoia)</div>
             <p class="matrix-platform-desc">
-              采用 Swift / AppKit 原生架构，适配 Apple Silicon。随动透镜、视频实时同传、顶层原位覆盖与状态栏深度整合。
+              采用 Swift / AppKit 原生通用架构（同时支持 Apple Silicon 与 Intel Mac）。随动透镜、视频实时同传、顶层原位覆盖与状态栏深度整合。
             </p>
             <a href="#download" class="btn btn-primary" style="padding: 8px 14px; font-size: 0.85rem;">下载稳定版</a>
           </div>
@@ -470,12 +470,29 @@
         <div class="faq-list">
           <div class="faq-item">
             <button class="faq-question">
-              <span>初次打开应用提示“无法打开，因为无法验证开发者”怎么办？</span>
+              <span>初次打开应用提示“无法验证开发者”或“无法打开”怎么办？</span>
               <span class="faq-icon">+</span>
             </button>
             <div class="faq-answer">
               <div class="faq-answer-inner">
-                这是 macOS Gatekeeper 对未走 App Store 商店分发应用的常规安全保护。解决方法非常简单：在「访达 (Finder) -> 应用程序」中找到 TransEase，<strong>按住 Control 键并用鼠标右键点击图标，在弹出菜单中选择“打开”</strong>，点击确认即可永久加入系统受信任名单；或者在终端中运行 <code>xattr -cr /Applications/TransEase.app</code> 即可解除拦截。
+                当前内测包尚未接入付费 Apple 公证签名，下载后系统会常规触发 macOS Gatekeeper 拦截。放行方法非常简单（适配 macOS 14 / 15 Sequoia 及以上）：<br>
+                1. 先点击弹窗中的「完成 / 好」，然后打开「<strong>系统设置 -> 隐私与安全性</strong>」，向下滚动到“安全性”栏，点击 TransEase 旁的「<strong>仍要打开</strong>」并验证密码即可；<br>
+                2. 或直接在「终端」中运行 <code>xattr -cr /Applications/TransEase.app</code> 一键解除隔离拦截。
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>拿到内测包后，首次上手建议怎么配置体验最好？</span>
+              <span class="faq-icon">+</span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                打开软件主页即可看到顶部的权限与通道状态条：<br>
+                • <strong>权限授权</strong>：前往「设置 -> 系统权限状态」按需开启「辅助功能（划词与透镜锁定）」和「屏幕与系统音频录制（透镜 OCR 与系统内录）」（macOS 14.2+ 即使未开录屏也可尝试 CoreAudio 纯音频内录）；<br>
+                • <strong>国内直连建议</strong>：如果平时未开启系统代理，建议前往「设置 -> 翻译引擎与网络代理」免费申请并填入百度翻译 App ID 与密钥，即可告别超时与公共源额度限制；<br>
+                • <strong>问题反馈</strong>：如遇异常，点击「设置 -> 底部“复制诊断”」即可一键复制不含原文与密钥的脱敏环境报告发给开发者排查。
               </div>
             </div>
           </div>
