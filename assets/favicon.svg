@@ -1,40 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="obsidianBase" x1="32" y1="4" x2="32" y2="60" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#252931"/>
-      <stop offset="54%" stop-color="#16181f"/>
-      <stop offset="100%" stop-color="#0b0d11"/>
+    <linearGradient id="prismBg" x1="32" y1="4" x2="32" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#1a2135"/>
+      <stop offset="56%" stop-color="#121627"/>
+      <stop offset="100%" stop-color="#0b0e19"/>
     </linearGradient>
-    <radialGradient id="topAura" cx="32" cy="14" r="34" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#73c7fa" stop-opacity="0.16"/>
-      <stop offset="100%" stop-color="#73c7fa" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="bezelGrad" x1="16" y1="16" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#f5f8fc"/>
-      <stop offset="40%" stop-color="#a8bccc"/>
-      <stop offset="76%" stop-color="#516075"/>
-      <stop offset="100%" stop-color="#7ccbf9"/>
+    <linearGradient id="leftFace" x1="20" y1="16" x2="32" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#f2f7ff"/>
+      <stop offset="55%" stop-color="#b7cbe8"/>
+      <stop offset="100%" stop-color="#7c9cd6"/>
     </linearGradient>
-    <linearGradient id="prismGrad" x1="24" y1="24" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#ebf6ff" stop-opacity="0.92"/>
-      <stop offset="55%" stop-color="#86d1fc" stop-opacity="0.72"/>
-      <stop offset="100%" stop-color="#3c77ab" stop-opacity="0.52"/>
+    <linearGradient id="rightFace" x1="32" y1="16" x2="45" y2="48" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#87a6cc" stop-opacity="0.62"/>
+      <stop offset="55%" stop-color="#7289cb" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#9e8ef7" stop-opacity="0.72"/>
+    </linearGradient>
+    <linearGradient id="spectrum" x1="27" y1="29" x2="58" y2="39" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="28%" stop-color="#88f3ff"/>
+      <stop offset="56%" stop-color="#ffd96b"/>
+      <stop offset="80%" stop-color="#8b7dff"/>
+      <stop offset="100%" stop-color="#7042e8" stop-opacity="0.4"/>
     </linearGradient>
   </defs>
 
-  <rect x="4" y="4" width="56" height="56" rx="13" fill="url(#obsidianBase)"/>
-  <rect x="4" y="4" width="56" height="56" rx="13" fill="url(#topAura)"/>
-  <rect x="4.6" y="4.6" width="54.8" height="54.8" rx="12.4" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1"/>
+  <rect x="4" y="4" width="56" height="56" rx="15" fill="url(#prismBg)"/>
+  <rect x="4.6" y="4.6" width="54.8" height="54.8" rx="14.4" stroke="#ffffff" stroke-opacity="0.18" stroke-width="1"/>
 
-  <!-- 4 Optical Viewfinder Corner Brackets -->
-  <path d="M13.5 22.5 V18 A4.5 4.5 0 0 1 18 13.5 H22.5" stroke="#cce8fd" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.92"/>
-  <path d="M41.5 13.5 H46 A4.5 4.5 0 0 1 50.5 18 V22.5" stroke="#d9effe" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.96"/>
-  <path d="M22.5 50.5 H18 A4.5 4.5 0 0 1 13.5 46 V41.5" stroke="#a6cde8" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.78"/>
-  <path d="M50.5 41.5 V46 A4.5 4.5 0 0 1 46 50.5 H41.5" stroke="#b9dbf5" stroke-width="2.4" stroke-linecap="round" stroke-opacity="0.86"/>
+  <!-- Incident White Beam -->
+  <path d="M5 36.5 L20.5 32" stroke="#ffffff" stroke-width="2.2" stroke-linecap="round"/>
 
-  <!-- Lens Cavity & Titanium-Ice Bezel -->
-  <circle cx="32" cy="32" r="13.5" fill="#0b1019" stroke="url(#bezelGrad)" stroke-width="2.8"/>
+  <!-- Spectrum Dispersion Fan -->
+  <path d="M27.5 29.8 L59 35.5 L59 42.5 L27.5 31.4 Z" fill="url(#spectrum)" opacity="0.88"/>
 
-  <!-- Center Rotated Optical Crystal Prism -->
-  <rect x="25.6" y="25.6" width="12.8" height="12.8" rx="3.4" transform="rotate(45 32 32)" fill="url(#prismGrad)" stroke="#ccebff" stroke-width="1.4" stroke-opacity="0.95"/>
+  <!-- Prism Facets -->
+  <polygon points="32,14 20,32 32,50 28.5,32" fill="url(#leftFace)" opacity="0.9"/>
+  <polygon points="32,14 44.5,32 32,50 28.5,32" fill="url(#rightFace)"/>
+  <polygon points="32,14 44.5,32 32,50 20,32" stroke="#eaf4ff" stroke-opacity="0.78" stroke-width="1.2" stroke-linejoin="round"/>
+  <path d="M20 32 L28.5 30.2 L44.5 32 M32 14 L28.5 30.2 L32 50" stroke="#ffffff" stroke-opacity="0.52" stroke-width="0.9"/>
 </svg>

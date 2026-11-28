@@ -1,8 +1,8 @@
 {
-  "version": "3.1.0",
-  "build": 310,
-  "releaseDate": "2026-11-27",
+  "version": "3.1.1",
+  "build": 311,
+  "releaseDate": "2026-11-28",
   "name": "TransEase 极速随动透镜与多语种同传字幕",
-  "releaseNotes": "1. Apple Silicon & Intel 原生通用二进制 (Universal Binary)，兼容 macOS 14.0+\n2. 随动透镜顶部控制栏齐平、密集小字精准排版、漫画竖排嵌字与 AI 型号原名保留\n3. 实时倾听字幕自动语种识别 + macOS 14.2+ CoreAudio Process Tap 纯音频内录与本地离线语音模型管理\n4. 新增主页内测就绪状态条、四项系统权限体检与脱敏诊断报告一键复制导出",
+  "releaseNotes": "1. AI 深度解析新增国内直连 DeepSeek / 通义千问及 OpenAI 兼容接口（日常翻译完全不依赖 Gemini）\n2. 修复随动透镜与全屏覆盖在宽栏推文下向右越界、多行折行压盖及增量重影问题\n3. 应用内版本检查支持同版本 Build 增量检测与更新说明展示",
   "downloadUrl": "https://liuh33494-droid.github.io/TransEase-web/downloads/TransEase_macOS.dmg"
 }

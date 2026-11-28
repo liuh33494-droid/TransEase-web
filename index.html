@@ -7,6 +7,7 @@
   <meta name="description" content="透镜（TransEase）是一款专为 macOS 与 Windows 打造的随动透镜与实时同传字幕工具。吸附光标随动滑行、4 行阶梯保留视频字幕、1:1 原位透明覆盖与国内免翻直连。">
   <meta name="keywords" content="透镜, TransEase, macOS翻译, 随动透镜, 实时字幕, 视频同传, 划词翻译, 屏幕OCR">
 
+  <link rel="icon" type="image/png" sizes="256x256" href="assets/app-icon.png">
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="apple-touch-icon" href="assets/app-icon.png">
 
@@ -58,7 +59,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="container">
-        <p class="hero-eyebrow">v3.1.0 · macOS 14.0+ 通用版与 Windows 原生客户端</p>
+        <p class="hero-eyebrow">v3.1.1 (macOS) · Windows v3.1.0 基础工作台版</p>
 
         <h1 class="hero-title">
           视线所及，<span class="hero-title-accent">原位译达</span>
@@ -358,12 +359,12 @@
           <div class="matrix-card active">
             <div class="matrix-status-line">
               <span class="status-dot ready"></span>
-              <span>现已发布</span>
+              <span>现已发布（基础版）</span>
             </div>
             <h3 class="matrix-platform-title">Windows 桌面端</h3>
             <div class="matrix-platform-target">Windows 10 / 11 · x64</div>
             <p class="matrix-platform-desc">
-              基于 Tauri 2 与 Rust 原生构建，提供随动透镜、穿透热键、百度直连与 4 行字幕流。
+              基于 Tauri 2 与 Rust 构建，现已支持桌面工作台、鼠标穿透、剪贴板快捷键（Alt+D）、百度直连与基础字幕流；屏幕区域 OCR 随动框与系统音频内录仍在追齐开发中（macOS 为当前完整主力版本）。
             </p>
             <a href="javascript:void(0)" onclick="openWindowsDownloadModal()" class="btn btn-secondary btn-sm">下载 Windows 版</a>
           </div>
@@ -604,11 +605,11 @@
     <div style="background: #10141e; border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 16px; max-width: 500px; width: 100%; padding: 28px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7); position: relative;">
       <button onclick="closeWindowsDownloadModal()" style="position: absolute; top: 16px; right: 16px; background: none; border: none; color: #94a3b8; font-size: 22px; cursor: pointer;" aria-label="关闭">&times;</button>
       <div style="margin-bottom: 14px;">
-        <h3 style="margin: 0 0 4px 0; font-size: 16px; font-weight: 500; color: #f1f5f9;">TransEase Windows 原生版</h3>
-        <span style="font-size: 13px; color: #7dd3fc;">v3.1.0 · Windows 10/11 64 位</span>
+        <h3 style="margin: 0 0 4px 0; font-size: 16px; font-weight: 500; color: #f1f5f9;">TransEase Windows 原生版（基础工作台）</h3>
+        <span style="font-size: 13px; color: #7dd3fc;">v3.1.0-win · Windows 10/11 64 位</span>
       </div>
-      <p style="color: #94a3b8; font-size: 14px; line-height: 1.6; margin-bottom: 20px;">
-        适配 DirectComposition 透明随动透镜与实时同传。为国内网络环境提供多渠道直链：
+      <p style="color: #94a3b8; font-size: 13.5px; line-height: 1.6; margin-bottom: 16px;">
+        现已提供鼠标穿透翻译工作台、全局快捷键剪贴板翻译（Alt+D）、百度/Google/MyMemory 多通道与基础字幕流；屏幕区域 OCR 随动框、系统声音内录同传及 AI 深度解析目前仅支持 macOS 端，Windows 端将在后续迭代中逐步对齐。
       </p>
 
       <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 18px;">
